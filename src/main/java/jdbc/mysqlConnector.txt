@@ -1,0 +1,16 @@
+Here is a cleaner and more professional version of the steps:
+
+## Adding MySQL Connector JAR to an Eclipse Project
+
+1. **Right-click** on your project in the **Project Explorer**.
+2. Select **Build Path → Configure Build Path**.
+3. Open the **Libraries** tab.
+4. Select **Classpath**, then click **Add External JARs...** on the right side.
+5. Browse to the location where you downloaded the **MySQL Connector/J (`mysql-connector-j-<version>.jar`)** file, select it, and click **Open**.
+6. Click **Apply and Close** to save the changes.
+
+### Verification
+
+* Expand your project.
+* Go to **Referenced Libraries**.
+* Ensure that the **MySQL Connector/J** JAR appears there. If it does, the JDBC driver has been added successfully.

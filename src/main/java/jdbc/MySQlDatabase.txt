@@ -1,0 +1,336 @@
+# MySQL Installation Guide (Windows)
+
+## Step 1: Download MySQL Installer
+
+1. Open your web browser.
+2. Visit the official MySQL Downloads page:
+   - https://dev.mysql.com/downloads/installer/
+3. Download **MySQL Installer for Windows**.
+   - Direct Download: https://dev.mysql.com/downloads/file/?id=552804
+
+---
+
+## Step 2: Run the Installer
+
+1. Double-click the downloaded **MySQL Installer**.
+2. If Windows displays a **User Account Control (UAC)** prompt, click **Yes**.
+3. Wait for the installer to start.
+
+---
+
+## Step 3: Choose Setup Type
+
+You will see several installation options.
+
+Select **Full**.
+
+This installs:
+- MySQL Server
+- MySQL Workbench
+- MySQL Shell
+- MySQL Connector/J
+- Documentation
+- Sample Databases and Utilities
+
+Click **Next**.
+
+---
+
+## Step 4: Check Requirements
+
+The installer checks for missing software.
+
+If any prerequisites are missing:
+
+- Click **Execute**.
+- Allow the installer to download and install the required components.
+
+Once completed, click **Next**.
+
+---
+
+## Step 5: Install MySQL
+
+1. Review the list of products to be installed.
+2. Click **Execute**.
+3. Wait until all products are installed successfully.
+4. Click **Next**.
+
+---
+
+## Step 6: Configure MySQL Server
+
+Click **Next** to begin server configuration.
+
+Keep the default settings:
+
+- Configuration Type: **Development Computer**
+- Server Type: **Standalone MySQL Server**
+
+Click **Next**.
+
+---
+
+## Step 7: Configure Networking
+
+Keep the default settings:
+
+- TCP/IP Enabled ✔
+- Port: **3306**
+- Open Windows Firewall Port ✔
+
+Click **Next**.
+
+---
+
+## Step 8: Authentication Method
+
+Select:
+
+**Use Strong Password Encryption (Recommended)**
+
+Click **Next**.
+
+---
+
+## Step 9: Set Root Password
+
+Create a password for the **root** user.
+
+Example:
+
+```text
+Username : root
+Password : root
+```
+
+> **Note:** Use a strong password that you can easily remember.
+
+Click **Next**.
+
+---
+
+## Step 10: Windows Service Configuration
+
+Keep the default settings:
+
+- Configure MySQL Server as a Windows Service ✔
+- Start MySQL Server at System Startup ✔
+- Run Windows Service as Standard System Account ✔
+
+Click **Next**.
+
+---
+
+## Step 11: Apply Configuration
+
+Click **Execute**.
+
+The installer will:
+
+- Create configuration files
+- Start the MySQL Server
+- Apply security settings
+
+Once every step shows a **green check mark (✔)**, click **Finish**.
+
+Then click **Next**.
+
+---
+
+## Step 12: Complete Installation
+
+Click **Finish** to exit the installer.
+
+✅ MySQL has now been installed successfully.
+
+---
+
+# Verify MySQL Installation
+
+## Step 1
+
+Open **Command Prompt (CMD)**.
+
+---
+
+## Step 2
+
+Run:
+
+```bash
+mysql --version
+```
+
+Example Output:
+
+```text
+mysql  Ver 9.x.x for Win64
+```
+
+If the version is displayed, MySQL is installed successfully.
+
+---
+
+# If `mysql` is Not Recognized
+
+If you get the following error:
+
+```text
+'mysql' is not recognized as an internal or external command
+```
+
+You need to add MySQL to the Windows **PATH**.
+
+---
+
+## Step 1
+
+Open:
+
+```
+This PC
+→ Right Click
+→ Properties
+→ Advanced System Settings
+→ Environment Variables
+```
+
+---
+
+## Step 2
+
+Under **System Variables**, select:
+
+```
+Path
+```
+
+Click **Edit**.
+
+---
+
+## Step 3
+
+Click **New**.
+
+Add the MySQL **bin** folder.
+
+Example:
+
+```text
+C:\Program Files\MySQL\MySQL Server 9.0\bin
+```
+
+> Your version number may be different.
+
+---
+
+## Step 4
+
+Click:
+
+- OK
+- OK
+- OK
+
+Restart Command Prompt and run:
+
+```bash
+mysql --version
+```
+
+---
+
+# Connect to MySQL Server
+
+Open Command Prompt and execute:
+
+```bash
+mysql -u root -p
+```
+
+Enter your password when prompted.
+
+Example:
+
+```text
+Enter password:
+```
+
+If the password is correct, you will see:
+
+```text
+Welcome to the MySQL monitor.
+mysql>
+```
+
+You are now connected to the MySQL Server.
+
+---
+
+# Exit MySQL
+
+```sql
+exit;
+```
+
+OR
+
+```sql
+quit;
+```
+
+---
+
+# Common MySQL Commands
+
+### Show all databases
+
+```sql
+SHOW DATABASES;
+```
+
+### Create a database
+
+```sql
+CREATE DATABASE college;
+```
+
+### Select a database
+
+```sql
+USE college;
+```
+
+### Show all tables
+
+```sql
+SHOW TABLES;
+```
+
+--
+
+# Quick Installation Summary
+
+1. Download MySQL Installer.
+2. Run the Installer.
+3. Select **Full** setup.
+4. Install all required components.
+5. Configure the MySQL Server.
+6. Set the **root** password.
+7. Apply the configuration.
+8. Finish the installation.
+9. Verify installation using:
+
+```bash
+mysql --version
+```
+
+10. Connect to MySQL: (mac)
+
+```bash
+mysql -u root -p
+```
+
+--

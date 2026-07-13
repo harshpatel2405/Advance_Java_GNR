@@ -1,0 +1,27 @@
+JDBC 
+----
+Java Database Connectivity
+It is used to connect java and database 
+
+Java Application
+       │
+       ▼
+     JDBC API
+       │
+       ▼
+   JDBC Driver
+       │
+       ▼
+    Database
+    
+--------------
+Steps of JDBC
+--------------
+1. Load the Driver 
+2. Establish connection 
+3. Create a statement
+4. Execute Sql Query 
+5. Process the Result 
+6. Close the connection
+
+<=========================================================>
