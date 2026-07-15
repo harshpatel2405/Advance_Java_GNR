@@ -25,3 +25,12 @@ Steps of JDBC
 6. Close the connection
 
 <=========================================================>
+
+1. Create database 
+ create database jdbcDemo;
+ 
+2. use database;
+use jdbcDemo;
+
+3. create table 
+create table student (id INTEGER, name varchar(20), age INTEGER, marks DOUBLE);
