@@ -34,3 +34,18 @@ use jdbcDemo;
 
 3. create table 
 create table student (id INTEGER, name varchar(20), age INTEGER, marks DOUBLE);
+
+
+├── StudentManagementSystem.java 
+1. Add Student
+2. View Students
+3. Search Student
+4. Update Student
+5. Delete Student
+6. Count Students
+7. Topper Details
+8. Students Above Marks
+9. Sort By Marks
+10. Exit
+├── EmployeeManagementSystem.java
+└── ProductManagementSystem.java
