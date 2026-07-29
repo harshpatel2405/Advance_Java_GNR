@@ -48,4 +48,42 @@ create table student (id INTEGER, name varchar(20), age INTEGER, marks DOUBLE);
 9. Sort By Marks
 10. Exit
 ├── EmployeeManagementSystem.java
+1. Add Employee
+2. View All Employees
+3. Search Employee by ID
+4. Search Employee by Name
+5. Update Employee Details
+6. Delete Employee
+7. Search Employees by Department
+8. Display Employees by Salary Range
+9. Sort Employees by Salary (Ascending)
+10. Sort Employees by Salary (Descending)
+11. Count Total Employees
+12. Display Highest Paid Employee
+13. Display Lowest Paid Employee
+14. Increase Salary by Percentage
+15. Back to Main Menu
+
+CREATE TABLE Department (
+    dept_id INT PRIMARY KEY AUTO_INCREMENT,
+    dept_name VARCHAR(100) NOT NULL UNIQUE,
+    dept_location VARCHAR(100),
+    dept_head VARCHAR(100)
+);
+
+CREATE TABLE Employee (
+    emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    emp_name VARCHAR(100) NOT NULL,
+    designation VARCHAR(100),
+    salary DECIMAL(10,2) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    phone VARCHAR(15),
+    hire_date DATE,
+    city VARCHAR(100),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
+);
+
 └── ProductManagementSystem.java

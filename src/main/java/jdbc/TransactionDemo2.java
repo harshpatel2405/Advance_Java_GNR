@@ -2,7 +2,10 @@ package jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import com.mysql.cj.xdevapi.Result;
 
 public class TransactionDemo2 {
 	public static void main(String[] args) {
@@ -27,9 +30,19 @@ public class TransactionDemo2 {
 			ps1.executeUpdate();
 			System.out.println("Money Withdrawn Successfully");
 			
+			String sql = "Select * from bank";
+			PreparedStatement ps= con.prepareStatement(sql);
+			
+			ResultSet rs = ps.executeQuery();
+			System.out.println("ID\tname\tBalance");
+			while(rs.next())
+			{
+				System.out.println(rs.getInt("id") + "\t" + rs.getString("name") + "\t" + rs.getDouble("balance"));
+			}
+			
 			// * error 
 			int x = 10 / 0;
-			
+				
 			// * money deposit
 			ps2.setDouble(1, 10000);
 			ps2.setInt(2, 1);

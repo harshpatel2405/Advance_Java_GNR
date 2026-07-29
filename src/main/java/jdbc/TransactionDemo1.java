@@ -49,6 +49,8 @@ public class TransactionDemo1 {
 		ps2.executeUpdate();
 		System.out.println("Money Depositted Successfully");
 		
+		con.commit();
+		
 		JDBCUtils.closeConnection(con);
 		}catch(Exception e)
 		{
