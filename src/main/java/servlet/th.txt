@@ -1,0 +1,27 @@
+MVC 
+---
+MODEL 
+VIEW 
+CONTROLLER
+
+
+Servlets 
+--------
+server-side technologies
+
+xml -> web.xml 
+
+Dynamic Web Project 
+
+Servlet Container -> Apache Tomcat
+
+
+windows -> preferences -> search 'server' -> select 'Runtime Enviroments' -> add Apache Tomcat and Browse Directoy
+windows -> show view -> servers -> click to create a new server -> apache -> apache 10.1 -> finish
+
+File -> new -> other -> dynamic web project -> projectName -> next -> next -> select checkbox(generate web.xml) -> finish
+Right click on project 
+
+1. Java versionn 
+2. dynamic 5
+3. 

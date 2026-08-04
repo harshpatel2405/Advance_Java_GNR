@@ -1,0 +1,33 @@
+=========================================
+INSTALL A NEW ECLIPSE (KEEP THE OLD ONE)
+=========================================
+
+1. Download the Eclipse Installer. (Copy and paste link in browser)
+	Eclipse Installer Link: https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2026-06/R/eclipse-inst-jre-win64.exe
+
+4. Open the installer.
+
+5. Select:
+   Eclipse IDE for Enterprise Java and Web Developers
+
+6. IMPORTANT:
+   When asked for the installation folder,
+   DO NOT choose your old Eclipse folder.
+
+   Example:
+
+   Old:
+   C:\eclipse
+
+   New:
+   C:\eclipse-2025
+
+7. Click Install.
+
+8. Launch the new Eclipse.
+
+That's it!
+
+✔ Your old Eclipse remains unchanged.
+✔ Both Eclipse versions can be used independently.
+✔ You can delete the old one later if you no longer need it.

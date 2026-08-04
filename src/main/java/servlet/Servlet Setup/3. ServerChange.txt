@@ -1,0 +1,119 @@
+=========================================
+APACHE TOMCAT SETUP IN ECLIPSE
+=========================================
+If you dont want to install a new apache tomcat , a zip has been provided in your whatsapp group as well..
+Steps would be same , just this download step will be skipped
+---
+
+
+
+STEP 1: Download Apache Tomcat
+
+Download Tomcat 10.1.x from:
+
+https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.57/bin/apache-tomcat-10.1.57-windows-x64.zip
+
+Extract it to a folder.
+
+Example:
+
+C:\apache-tomcat-10.1.57
+
+=========================================
+
+STEP 2: Open Eclipse
+
+Start Eclipse.
+
+=========================================
+
+STEP 3: Open Runtime Environments
+
+Window
+→ Preferences
+→ Server
+→ Runtime Environments
+
+=========================================
+
+STEP 4: Add Tomcat
+
+Click Add...
+
+Select:
+
+Apache
+→ Apache Tomcat v10.1
+
+Click Next.
+
+=========================================
+
+STEP 5: Select Tomcat Folder
+
+Browse to the extracted Tomcat folder.
+
+Example:
+
+C:\apache-tomcat-10.1.57
+
+Click Finish.
+
+Click Apply and Close.
+
+=========================================
+
+STEP 6: Open Servers View
+
+Window
+→ Show View
+→ Servers
+
+=========================================
+
+STEP 7: Create a Tomcat Server
+
+Inside the Servers view:
+
+Right Click
+→ New
+→ Server
+
+Select:
+
+Apache
+→ Tomcat v10.1 Server
+
+Click Next.
+
+Select the Tomcat Runtime.
+
+Click Finish.
+
+=========================================
+
+STEP 8: Verify
+
+The Servers view should now display:
+
+Tomcat v10.1 Server at localhost
+
+=========================================
+
+STEP 9: Test
+
+File
+→ New
+→ Dynamic Web Project
+
+Target Runtime:
+
+Apache Tomcat v10.1
+
+Dynamic Web Module:
+
+6.0
+
+Finish.
+
+=========================================

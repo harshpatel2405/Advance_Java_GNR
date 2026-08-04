@@ -1,0 +1,213 @@
+==========================================================
+CHANGE SYSTEM-WIDE JAVA FROM JDK 1.8 TO JDK 21 (WINDOWS)
+==========================================================
+
+STEP 1: Check Current Java Version
+----------------------------------
+
+Open Command Prompt.
+
+Run:
+
+java -version
+
+If it shows Java 1.8, continue.
+
+==========================================================
+
+STEP 2: Download JDK 21
+-----------------------
+
+Download JDK 21 (Windows x64) from: (paste link directly in browser)
+
+https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe
+
+Install it.
+
+Default location:
+
+C:\Program Files\Java\jdk-21
+
+==========================================================
+
+STEP 3: Check Installation
+--------------------------
+
+Go to:
+
+C:\Program Files\Java
+
+You should now have something like:
+
+jdk1.8.0_xxx
+jdk-21
+
+==========================================================
+
+STEP 4: Open Environment Variables
+----------------------------------
+
+Press:
+
+Windows Key
+
+Search:
+
+Edit the system environment variables
+
+Open it.
+
+Click:
+
+Environment Variables...
+
+==========================================================
+
+STEP 5: Update JAVA_HOME
+------------------------
+
+Under "System Variables"
+
+Find:
+
+JAVA_HOME
+
+Click:
+
+Edit
+
+Change its value from:
+
+C:\Program Files\Java\jdk1.8.0_xxx
+
+to
+
+C:\Program Files\Java\jdk-21
+
+Click OK.
+
+==========================================================
+
+STEP 6: Update PATH
+-------------------
+
+Under "System Variables"
+
+Find:
+
+Path
+
+Click:
+
+Edit
+
+Look for entries like:
+
+%JAVA_HOME%\bin
+
+If it already exists:
+
+Leave it.
+
+If you find an old Java path like:
+
+C:\Program Files\Java\jdk1.8.0_xxx\bin
+
+Remove it.
+
+If %JAVA_HOME%\bin does not exist:
+
+Click New
+
+Add:
+
+%JAVA_HOME%\bin
+
+Move it near the top of the list.
+
+Click OK.
+
+==========================================================
+
+STEP 7: Close All Windows
+-------------------------
+
+Click OK on every dialog to save the changes.
+
+==========================================================
+
+STEP 8: Restart Command Prompt
+------------------------------
+
+Close all Command Prompt windows.
+
+Open a new Command Prompt.
+
+==========================================================
+
+STEP 9: Verify
+--------------
+
+Run:
+
+java -version
+
+Expected:
+
+java version "21"
+
+Run:
+
+javac -version
+
+Expected:
+
+javac 21
+
+Run:
+
+echo %JAVA_HOME%
+
+Expected:
+
+C:\Program Files\Java\jdk-21
+
+==========================================================
+
+STEP 10: If Java Still Shows 1.8
+--------------------------------
+
+Run:
+
+where java
+
+If you see something like:
+
+C:\Program Files\Java\jdk1.8.0_xxx\bin\java.exe
+
+Remove that old Java path from the PATH variable.
+
+If you see:
+
+C:\Program Files\Common Files\Oracle\Java\javapath
+
+Move %JAVA_HOME%\bin above it in the PATH variable
+or remove the Oracle javapath entry if you no longer
+need it.
+
+Restart Command Prompt and check again.
+
+==========================================================
+
+FINAL VERIFICATION
+------------------
+
+java -version
+
+javac -version
+
+echo %JAVA_HOME%
+
+All should point to JDK 21.
+
+==========================================================

@@ -1,0 +1,11 @@
+1. Update Java from 8 to 21 (Those who have jdk 20+ should not change). This is for only those who have java 1.8(8)
+-> FileName : JavaChange.txt
+
+2. Install new eclipse (if your eclipse does not support Dynamic Web Module 6)
+-> Filename : EclipseChange.txt
+
+3. Configure Apache Tomcat 
+-> FileName : ServerChange.txt
+
+
+Follow in this order 
