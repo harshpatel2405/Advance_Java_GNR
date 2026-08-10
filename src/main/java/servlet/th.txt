@@ -25,3 +25,191 @@ Right click on project
 1. Java versionn 
 2. dynamic 5
 3. 
+
+<=========================================================>
+1. What is Desktop Application 
+2. What is Web Application 
+
+Client -> browser  -> request 
+Server -> request handle
+
+
+client -> sends request -> server 
+server -> process request -> response send 
+response send -> browser 
+
+
+<=======================================================>
+HOW THE INTERNET WORKS? ?
+
+
+DNS -> finds IP address
+Browser -> Connect to server 
+HTTP Request 
+HTTP Response 
+
+<======================================================>
+Web Server -> Apache HTTP Server 
+<======================================================>
+What is a servlet container ?
+
+A Servlet Container is software that manages the complete lifecycle of Servlets.
+
+Responsibilities
+
+• Load Servlets
+• Create Servlet Objects
+• Call init()
+• Call service()
+• Call destroy()
+• Manage Sessions
+• Handle HTTP Requests
+• Handle HTTP Responses
+
+Examples
+
+• Apache Tomcat
+• Jetty
+
+====================================================================
+18. WHAT IS A SERVLET?
+=====================================================================
+
+Definition
+
+A Servlet is a Java class that runs inside a Servlet Container and
+processes HTTP Requests to generate Dynamic Responses.
+
+A Servlet can
+
+• Read Form Data
+• Validate User Input
+• Connect Database
+• Perform Calculations
+• Manage Sessions
+• Generate HTML
+• Generate JSON
+
+=====================================================================
+19. WHY DO WE NEED SERVLETS?
+=====================================================================
+
+Without Servlets
+
+• Java cannot directly handle browser requests.
+• No standard mechanism to process HTTP requests.
+
+Servlets provide
+
+• Request Handling
+• Response Generation
+• Session Management
+• Database Integration
+• Dynamic Web Content
+
+Web Server: Understands HTTP and serves static files like HTML, CSS, and images,
+ but cannot run Java code natively.
+Servlet Container: Provides the Java runtime environment required to execute servlets 
+and dynamic JSP pages.
+
+22. SERVLET ARCHITECTURE
+=====================================================================
+
+                     USER
+                       │
+                       ▼
+                 WEB BROWSER
+                       │
+               HTTP REQUEST
+                       │
+                       ▼
+               APACHE TOMCAT
+            (Servlet Container)
+                       │
+                       ▼
+                   SERVLET
+                       │
+                Business Logic
+                       │
+                 JDBC / DATABASE
+                       │
+                       ▼
+                   SERVLET
+                       │
+              HTTP RESPONSE
+                       │
+                       ▼
+                 WEB BROWSER
+
+
+23. COMPLETE REQUEST PROCESSING FLOW
+=====================================================================
+
+User
+↓
+Browser
+↓
+1. Sends HTTP Request
+↓
+Apache Tomcat
+↓
+2. Finds Correct Servlet
+↓
+Servlet
+↓
+3. Process Request
+↓
+4. Business Logic
+↓
+5. Connect Database (If Required)
+↓
+Database
+↓
+Servlet
+↓
+6. Generate Response
+↓
+Apache Tomcat
+↓
+Browser
+↓
+User sees the webpage
+
+<================================================>
+Servlet Lifecycle, GenericServlet, HttpServlet, init(), service(),
+destroy(), doGet() and doPost().
+
+
+HelloServlet -> without web.xml 
+WelcomeServlet -> with web.xml
+
+<======================================>
+Apache HTTP Server vs Apache Tomcat 
+
+
+<=======================================>
+Servlet Interface
+-----------------
+init()
+service()
+destroy()
+
+Generic Servlet
+---------------
+supports all protocol
+
+HTTPServlet
+-----------
+Supports only HTTP Protocols
+
+
+
+
+
+
+
+
+
+
+
+
