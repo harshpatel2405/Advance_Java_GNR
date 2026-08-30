@@ -201,7 +201,17 @@ supports all protocol
 HTTPServlet
 -----------
 Supports only HTTP Protocols
+<================================================>
 
+Request Dispatcher
+------------------
+Forward 
+
+HTML -> A -> B
+
+login.html -> loginServlet 
+                 / \
+     success.html   failure.html
 
 
 
