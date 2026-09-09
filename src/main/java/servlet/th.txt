@@ -213,10 +213,63 @@ login.html -> loginServlet
                  / \
      success.html   failure.html
 
+<==================================================>
+Servlet Config
+--------------
+one for each file 
+
+Each servlet gets its own ServletConfig.
+Example:
+
+    LoginServlet
+         |
+         ↓
+    ServletConfig
+         |
+         +---- adminEmail
+         +---- maxAttempts
+
+
+    PaymentServlet
+         |
+         ↓
+    ServletConfig
+         |
+         +---- paymentGateway
+         +---- currency
+
+
+The configuration is associated with the respective servlet.
+
+
+Simple rule:
+
+    ServletConfig = ONE servlet's configuration
 
 
 
+Servlet Context
+---------------
+one per application
 
+
+Concept:
+
+              ServletContext
+                    |
+                    +---- companyName
+                    |
+                    ↓
+             ABC Technologies
+                    |
+          +---------+---------+
+          |         |         |
+          ↓         ↓         ↓
+       Login     Register   Contact
+
+
+1. What is session?
+2. What are Cookies?
 
 
 

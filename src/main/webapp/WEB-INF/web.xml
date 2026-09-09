@@ -7,6 +7,11 @@
 
     <!-- 1. Display Name must come first -->
     <display-name>Advance_Java_GNR</display-name>
+    
+    <context-param> 
+        <param-name>token</param-name>        
+    		<param-value>token_value</param-value>    
+    </context-param>
 
     <!-- 2. Servlet Configurations -->
     <servlet>
@@ -18,6 +23,29 @@
         <servlet-name>welcome</servlet-name>
         <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+    		<servlet-name>configDemo</servlet-name>
+    		<servlet-class>servlet.ServletConfigDemo</servlet-class>
+    		
+    		<init-param>
+    			<param-name>username</param-name>
+    			<param-value>demo</param-value>
+    		</init-param>
+    		
+    		<init-param>
+    			<param-name>password</param-name>
+    			<param-value>demo@123</param-value>
+    		</init-param>
+    </servlet>
+    
+    <servlet-mapping>
+   	 	<servlet-name>configDemo</servlet-name>
+    		<url-pattern>/configDemo</url-pattern>
+ 
+    </servlet-mapping>
+    
+    
 
     <!-- 3. Welcome File List should follow or go to the bottom -->
     <welcome-file-list>
