@@ -28,6 +28,8 @@ public class GetAttribute extends HttpServlet{
 		pw.println("<b>UserName : " + sc.getAttribute("username")+"</b>");
 		pw.println("<h2>Get Attribute File Completed..</h2>");
 		
+		sc.removeAttribute("username");
+		
 		
 	}
 }

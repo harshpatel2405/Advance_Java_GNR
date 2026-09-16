@@ -43,13 +43,7 @@ public class LoginServlet extends HttpServlet {
 			RequestDispatcher rd = req.getRequestDispatcher("HTML/failure.html");
 			rd.forward(req, res);
 		}
-		
-//		out.println("<html>");
-//		out.println("<body>");
-//		out.println("<b>Hello World</b>");
-//		out.println("</body>");
-//		out.println("</html>");
-//		out.close();
+	
 		
 }
 }

@@ -267,8 +267,21 @@ Concept:
           ↓         ↓         ↓
        Login     Register   Contact
 
+<==========================================================>
+Session management
+------------------
+HTTP is stateless 
+data - store (unique data for eeach user)
+
+cookies - client side 
+HTTPsession -- server side 
+url rewriting 
+hidden 
 
 1. What is session?
+
+
+
 2. What are Cookies?
 
 
