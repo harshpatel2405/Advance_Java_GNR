@@ -32,7 +32,7 @@ public class LoginSession extends HttpServlet{
 			HttpSession hs = req.getSession();
 			
 			hs.setAttribute("username",username);
-			RequestDispatcher rd = req.getRequestDispatcher("HTML/success.html");
+			RequestDispatcher rd = req.getRequestDispatcher("/HTML/success.html");
 			rd.forward(req, res);				
 		}
 		else
