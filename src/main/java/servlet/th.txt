@@ -285,7 +285,37 @@ hidden
 2. What are Cookies?
 
 
-
+                  SESSION MANAGEMENT
+                         │
+          ┌──────────────┴──────────────┐
+          │                             │
+       COMPLETED                    REMAINING
+          │                             │
+       Cookies                       HttpSession
+                                        │
+                              ┌─────────┴─────────┐
+                              │                   │
+                           Methods            Practical
+                              │   
+							  │
+                    setAttribute()          Login
+                    getAttribute()          Dashboard
+                    removeAttribute()       Logout
+                    invalidate()            HTML
+                    getSession(false)
+                              │
+                              ↓
+                       JSESSIONID
+                       Session ID
+                              │
+                              ↓
+                     Session Timeout
+                              │
+                              ↓
+                       URL Rewriting
+                              │
+                              ↓
+                       Hidden Fields
 
 
 
