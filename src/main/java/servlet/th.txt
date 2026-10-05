@@ -317,5 +317,23 @@ hidden
                               ↓
                        Hidden Fields
 
+<===========================================================================>
+FILTERS AND LISTENERS
+---------------------
 
+Filters
+-------
+@webfilter
+
+/ -> all paths 
+/user -> 
+/user/*
+
+ 
+init 
+dofilter -- logic 
+destroy 
+
+filterchain 
+chain.dofilter  
 

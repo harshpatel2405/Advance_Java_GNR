@@ -12,6 +12,9 @@
         <param-name>token</param-name>        
     		<param-value>token_value</param-value>    
     </context-param>
+    
+    
+   
 
     <!-- 2. Servlet Configurations -->
     <servlet>
@@ -46,7 +49,10 @@
     </servlet-mapping>
     
     
-
+    
+ <session-config>
+    		<session-timeout>2</session-timeout>	
+    </session-config>
     <!-- 3. Welcome File List should follow or go to the bottom -->
     <welcome-file-list>
         <welcome-file>HTML/index.html</welcome-file>
