@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+//@WebFilter("/user-dashboard")
 @WebFilter("/user-dashboard")
 public class AuthorizationFilter implements Filter {
 //	@Override
@@ -23,6 +24,7 @@ public class AuthorizationFilter implements Filter {
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
 			throws IOException, ServletException {
 		
+	System.out.println("Authjorization Filter");
 		HttpServletRequest hsr = (HttpServletRequest)req;
 		
 		HttpSession hp = hsr.getSession(false);
@@ -30,7 +32,7 @@ public class AuthorizationFilter implements Filter {
 		if (hp != null) {
 			chain.doFilter(req, res);
 		} else {
-			((HttpServletResponse)res).sendRedirect("HTML/login.html");
+			((HttpServletResponse)res).sendRedirect("HTML/filters.html");
 		}
 	}
 	
