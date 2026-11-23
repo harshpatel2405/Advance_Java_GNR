@@ -1,0 +1,70 @@
+jsp 
+---
+Java server page 
+server side technology 
+html + java (jsp container)
+
+html + java -> .jsp  
+
+1. Declaration
+	<%! 
+		int a = 90;
+	%>
+ 
+2. Scriptlet 
+	<%
+	java code 
+	%>
+	
+3. Expression
+	<%= 
+		
+	/%>
+	
+Comment 
+-------
+<%-- --%>
+
+Directives
+----------
+which will give instructions to jsp container
+
+1. Page Directive 
+2. include Directive 
+3. Taglib Directive
+
+
+Page Directive 
+--------------
+Information related to page
+<%@page    %>
+
+attributes -- language , import , contentType , error page , session, buffer 
+
+Include
+-------
+includes another file 
+
+<%@ include file ="filename" %>
+
+
+Implicit Objects 
+----------------
+request 
+response 
+exception 
+out 
+session 
+config 
+pagecontext 	
+application 
+page 
+
+
+
+
+
+
+
+
+
