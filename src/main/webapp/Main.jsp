@@ -1,4 +1,4 @@
-<%@page import="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    
@@ -29,6 +29,8 @@
 	
 	pageContext.setAttribute("age",22);
 	int age = (Integer)pageContext.getAttribute("age");
+	
+	
 	
 %>
 <b>Name = <%=name %></b>
